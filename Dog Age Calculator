@@ -1,0 +1,45 @@
+#The following Python code is used to calculate a dog's age in human years:
+
+import traceback
+
+def calculator():
+    
+    # Function to calculate dog's age in human years
+    def calculate_human_age(dog_years):
+        if dog_years <= 1:
+            return dog_years * 15
+        elif dog_years <= 2:
+            return dog_years * 12
+        elif dog_years <= 3:
+            return dog_years * 9.3
+        elif dog_years <= 4:
+            return dog_years * 8
+        elif dog_years <= 5:
+            return dog_years * 7.2
+        else:
+           return 36 + (dog_years - 5) * 7
+    
+    # Get dog age
+    age = input("Input dog years: ")
+
+    try:
+        # Cast to float and check if it's a positive number
+        d_age = float(age)
+        
+        if d_age < 0:
+            # If user enters negative number, print message
+            print("Negative input is invalid.")
+        else:
+            # Calculate dog's age in human years
+            human_age = calculate_human_age(d_age)
+            print(f"The given dog age {d_age} is {human_age:.2f} in human years.")
+        
+    except ValueError:
+        # If non-numeric value, print invalid input message
+        print(f"{age} is an invalid input.")
+    except Exception as e:
+        # Catch any other exception and print the traceback
+        print("An error occurred:")
+        print(traceback.format_exc())
+    
+calculator()  # This line calls the calculator function
