@@ -1,3 +1,20 @@
+"""Write a Python program with at least the following functions.
+
+getFactors(x) - function that returns a list of factors of a given number x.  Basically, finds the numbers between 1 and the given integer that divide the number evenly.
+
+isPrime(x) - function that returns whether or not the given number x is prime.  This function returns a boolean.
+
+isComposite(x) - function that returns whether or not the given number x is composite.  This function returns a boolean.  We intend for you to reuse code from the prime number function here.
+
+isPerfect(x) - function that returns whether or not the given number x is perfect.  This function returns a boolean.
+
+isAbundant(x) - function that returns whether or not the given number x is abundant.  This function returns a boolean.
+
+isTriangular(x) - function that returns whether or not a given number x is triangular.  This function returns a boolean.
+
+isNarcissistic(x) - function that returns whether or not a given number is Narcissistic.  This function returns a boolean.
+"""
+
 def getFactors(x):
     """Return a list of factors of a given number x."""
     factors = [i for i in range(1, x + 1) if x % i == 0]
